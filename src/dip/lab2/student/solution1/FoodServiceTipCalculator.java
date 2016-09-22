@@ -13,7 +13,6 @@ public class FoodServiceTipCalculator extends ServiceTipManager{
             "Error: bill must be greater than or equal to " + this.getMinBill();
 
     private double bill;
-    private ServiceQuality serviceQuality;
 
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt, double bill) {
         this.setServiceRating(q);
@@ -25,7 +24,7 @@ public class FoodServiceTipCalculator extends ServiceTipManager{
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
-        switch(serviceQuality) {
+        switch(this.getServiceQuality()) {
             case GOOD:
                 tip = bill * this.getGoodRate();
                 break;
