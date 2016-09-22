@@ -21,7 +21,7 @@ public class FoodServiceTipCalculator extends ServiceTipManager{
     }
 
     @Override
-    public double getTip() {
+    public final double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(this.getServiceQuality()) {

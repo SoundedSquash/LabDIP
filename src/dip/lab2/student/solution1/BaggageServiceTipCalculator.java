@@ -29,7 +29,7 @@ public class BaggageServiceTipCalculator extends ServiceTipManager {
     }
 
     @Override
-    public double getTip() {
+    public final double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -47,7 +47,7 @@ public class BaggageServiceTipCalculator extends ServiceTipManager {
         return tip;
     }
 
-    public int getBagCount() {
+    public final int getBagCount() {
         return bagCount;
     }
 
@@ -59,11 +59,11 @@ public class BaggageServiceTipCalculator extends ServiceTipManager {
         this.bagCount = bagCount;
     }
 
-    public double getBaseTipPerBag() {
+    public final double getBaseTipPerBag() {
         return baseTipPerBag;
     }
 
-    public void setBaseTipPerBag(double baseTipPerBag) {
+    public final void setBaseTipPerBag(double baseTipPerBag) {
         if(baseTipPerBag < 0) {
             throw new IllegalArgumentException(
                     "error: base tip must be greater than or equal to zero");
@@ -79,11 +79,11 @@ public class BaggageServiceTipCalculator extends ServiceTipManager {
         }
     }
 
-    public double getMaxBill() {
+    public final double getMaxBill() {
         return maxBill;
     }
 
-    public void setMaxBill(double maxBill) {
+    public final void setMaxBill(double maxBill) {
         //Has to be above MIN_BILL which means it is also above or equal to 0.
         if(maxBill >= minBill){
             this.maxBill = maxBill;
