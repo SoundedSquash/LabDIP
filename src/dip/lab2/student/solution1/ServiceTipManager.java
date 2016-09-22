@@ -9,7 +9,7 @@ package dip.lab2.student.solution1;
  *
  * @author L115student
  */
-public abstract class ServiceTipManager implements TipManager {
+public abstract class ServiceTipManager implements TipCalculator {
     private double minBill = 0;
     private double goodRate = 0.20;
     private double fairRate = 0.15;

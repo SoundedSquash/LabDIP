@@ -9,7 +9,7 @@ package dip.lab2.student.solution1;
  *
  * @author L115student
  */
-public interface TipManager {
+public interface TipCalculator {
     public abstract double getMinBill();
     public abstract void setMinBill(double minBill);
     
