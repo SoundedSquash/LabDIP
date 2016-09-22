@@ -23,6 +23,8 @@ public abstract class ServiceTipManager implements TipManager, EnumManager {
     public final double getMinBill(){
         return minBill;
     }
+    
+    public abstract void setMinBill(double billAmt);
 
     public final double getGoodRate() {
         return goodRate;

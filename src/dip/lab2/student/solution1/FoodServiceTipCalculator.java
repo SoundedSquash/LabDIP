@@ -10,12 +10,9 @@ package dip.lab2.student.solution1;
  */
 public class FoodServiceTipCalculator extends ServiceTipManager{
     private final String BILL_ENTRY_ERR =
-            "Error: bill must be greater than or equal to " + super.getMinBill();
+            "Error: bill must be greater than or equal to " + this.getMinBill();
 
     private double bill;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
     private ServiceQuality serviceQuality;
 
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
@@ -23,18 +20,19 @@ public class FoodServiceTipCalculator extends ServiceTipManager{
         this.setMinBill(billAmt);
     }
 
+    @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
             case GOOD:
-                tip = bill * super.getGoodRate();
+                tip = bill * this.getGoodRate();
                 break;
             case FAIR:
-                tip = bill * super.getFairRate();
+                tip = bill * this.getFairRate();
                 break;
             case POOR:
-                tip = bill * super.getPoorRate();
+                tip = bill * this.getPoorRate();
                 break;
         }
 
@@ -47,10 +45,5 @@ public class FoodServiceTipCalculator extends ServiceTipManager{
             throw new IllegalArgumentException(BILL_ENTRY_ERR);
         }
         bill = billAmt;
-    }
-
-    public final void setServiceRating(ServiceQuality q) {
-        // No need to validate because enums provide type safety!
-        serviceQuality = q;
     }
 }

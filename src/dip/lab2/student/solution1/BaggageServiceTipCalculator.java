@@ -12,7 +12,7 @@ package dip.lab2.student.solution1;
 public class BaggageServiceTipCalculator extends ServiceTipManager {
     private double minBill = 0.00;
     private double maxBill = 100.00;
-    private final String BILL_ENTRY_ERR =
+    private final String billEntryErr =
             "Error: bill must be between " + minBill + " and "
             + maxBill;
 
@@ -34,13 +34,13 @@ public class BaggageServiceTipCalculator extends ServiceTipManager {
 
         switch(serviceQuality) {
             case GOOD:
-                tip = baseTipPerBag * bagCount * (1 + super.getGoodRate());
+                tip = baseTipPerBag * bagCount * (1 + this.getGoodRate());
                 break;
             case FAIR:
-                tip = baseTipPerBag * bagCount * (1 + super.getFairRate());
+                tip = baseTipPerBag * bagCount * (1 + this.getFairRate());
                 break;
             case POOR:
-                tip = baseTipPerBag * bagCount * (1 + super.getPoorRate());
+                tip = baseTipPerBag * bagCount * (1 + this.getPoorRate());
                 break;
         }
 
@@ -90,7 +90,7 @@ public class BaggageServiceTipCalculator extends ServiceTipManager {
         }
     }
 
-    public final String getBILL_ENTRY_ERR() {
-        return BILL_ENTRY_ERR;
+    public final String getBillEntryErr() {
+        return billEntryErr;
     }
 }
