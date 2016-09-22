@@ -13,5 +13,7 @@ public interface TipManager {
     public abstract double getMinBill();
     public abstract void setMinBill(double minBill);
     
+    public abstract double getTip();
     
+    public abstract void setServiceRating(ServiceQuality q);
 }

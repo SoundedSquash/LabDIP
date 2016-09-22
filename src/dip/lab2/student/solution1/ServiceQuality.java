@@ -9,8 +9,6 @@ package dip.lab2.student.solution1;
  *
  * @author wboyer
  */
-public interface EnumManager {
     public enum ServiceQuality {
         GOOD, FAIR, POOR
     }
-}

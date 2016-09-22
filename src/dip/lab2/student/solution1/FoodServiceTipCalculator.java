@@ -15,9 +15,10 @@ public class FoodServiceTipCalculator extends ServiceTipManager{
     private double bill;
     private ServiceQuality serviceQuality;
 
-    public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
+    public FoodServiceTipCalculator(ServiceQuality q, double billAmt, double bill) {
         this.setServiceRating(q);
         this.setMinBill(billAmt);
+        this.setBill(bill);
     }
 
     @Override
@@ -42,8 +43,20 @@ public class FoodServiceTipCalculator extends ServiceTipManager{
     @Override
     public final void setMinBill(double billAmt) {
         if(billAmt < 0) {
-            throw new IllegalArgumentException(BILL_ENTRY_ERR);
+            throw new IllegalArgumentException("Bill must be greater than or equal to 0.");
         }
         bill = billAmt;
     }
+
+    public final double getBill() {
+        return bill;
+    }
+
+    public final void setBill(double bill) {
+        if(bill < this.getMinBill()){
+            throw new IllegalArgumentException(BILL_ENTRY_ERR);
+        }
+        this.bill = bill;
+    }
+    
 }

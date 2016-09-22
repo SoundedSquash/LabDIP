@@ -25,7 +25,7 @@ public class BaggageServiceTipCalculator extends ServiceTipManager {
         this.setServiceRating(q); // perform validation
         this.setBagCount(bags);
 
-        baseTipPerBag = 1.00; // set default value
+        this.setBaseTipPerBag(1.00); // set default value
     }
 
     @Override

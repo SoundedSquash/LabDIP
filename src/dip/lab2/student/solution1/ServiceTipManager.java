@@ -9,7 +9,7 @@ package dip.lab2.student.solution1;
  *
  * @author L115student
  */
-public abstract class ServiceTipManager implements TipManager, EnumManager {
+public abstract class ServiceTipManager implements TipManager {
     private double minBill = 0;
     private double goodRate = 0.20;
     private double fairRate = 0.15;
@@ -17,6 +17,7 @@ public abstract class ServiceTipManager implements TipManager, EnumManager {
     
     private ServiceQuality serviceQuality;
     
+    @Override
     public abstract double getTip();
     
     @Override
@@ -24,6 +25,7 @@ public abstract class ServiceTipManager implements TipManager, EnumManager {
         return minBill;
     }
     
+    @Override
     public abstract void setMinBill(double billAmt);
 
     public final double getGoodRate() {
@@ -51,12 +53,13 @@ public abstract class ServiceTipManager implements TipManager, EnumManager {
         }
     }
     
-    public final void setServiceRating(EnumManager.ServiceQuality q) {
+    @Override
+    public final void setServiceRating(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
     }
 
-    public EnumManager.ServiceQuality getServiceQuality() {
+    public ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
 }
