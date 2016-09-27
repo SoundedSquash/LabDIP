@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  * @author wboyer
  */
 public class GUIWriter implements Writer {
+    
     public void writeMessage(String message){
         JOptionPane.showMessageDialog(null, message);
     }

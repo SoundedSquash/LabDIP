@@ -12,9 +12,10 @@ import java.util.Scanner;
  * @author wboyer
  */
 public class ConsoleReader implements Reader {
-    Scanner kb = new Scanner(System.in);
     
     public String readMessage(){
+    Scanner kb = new Scanner(System.in);
+    
         System.out.print("Enter message: ");
         return kb.nextLine();
     }
