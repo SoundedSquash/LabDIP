@@ -16,6 +16,9 @@ public abstract class ServiceTipManager implements TipCalculator {
     private double poorRate = 0.10;
     
     private ServiceQuality serviceQuality;
+
+    public ServiceTipManager() {
+    }
     
     @Override
     public abstract double getTip();
