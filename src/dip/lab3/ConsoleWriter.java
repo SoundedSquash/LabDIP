@@ -9,7 +9,7 @@ package dip.lab3;
  *
  * @author wboyer
  */
-public class ConsoleWriter implements Writer {
+public class ConsoleWriter implements MessageWriter {
     
     public void writeMessage(String message){
         System.out.println(message);

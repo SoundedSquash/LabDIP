@@ -9,6 +9,6 @@ package dip.lab3;
  *
  * @author wboyer
  */
-public interface Reader {
-    public abstract String readMessage();
+public interface MessageWriter {
+    public abstract void writeMessage(String message);
 }

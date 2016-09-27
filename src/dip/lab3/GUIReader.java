@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author wboyer
  */
-public class GUIReader implements Reader {
+public class GUIReader implements MessageReader {
     
     public String readMessage(){
         return JOptionPane.showInputDialog(null,"Enter message:");        

@@ -11,7 +11,7 @@ import java.util.Random;
  *
  * @author wboyer
  */
-public class RandomReader implements Reader {
+public class RandomReader implements MessageReader {
     
     public String readMessage(){
         Random rand = new Random();

@@ -10,10 +10,10 @@ package dip.lab3;
  * @author wboyer
  */
 public class MessageManager {
-    private Reader reader;
-    private Writer writer;
+    private MessageReader reader;
+    private MessageWriter writer;
 
-    public MessageManager(Reader reader, Writer writer) {
+    public MessageManager(MessageReader reader, MessageWriter writer) {
         this.reader = reader;
         this.writer = writer;
     }
