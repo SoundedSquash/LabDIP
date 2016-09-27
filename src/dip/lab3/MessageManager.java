@@ -19,9 +19,6 @@ public class MessageManager {
     }
     
     public void copy(){
-        String message;
-        
-        message = reader.readMessage();
-        writer.writeMessage(message);
+        writer.writeMessage(reader.readMessage());
     }
 }
